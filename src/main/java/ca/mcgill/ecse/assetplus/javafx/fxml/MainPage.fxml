@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox prefHeight="600.0" prefWidth="1062.0" stylesheets="/styles/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.assetplus.javafx.fxml.controllers.MainPageController">
+    <StackPane VBox.vgrow="NEVER">
+        <HBox alignment="TOP_LEFT" spacing="10" style="-fx-padding: 10;">
+            <ImageView fitWidth="100" fitHeight="100">
+                <image>
+                    <Image url="/images/assetPlusLogo.png" />
+                </image>
+            </ImageView>
+            <TabPane fx:id="mainTabPane" style="-fx-background-color: #f0f0f0;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                <tabs>
+                    <Tab fx:id="viewTicketsTab" style="-fx-background-color: #c0c0c0; -fx-text-fill: black; -fx-padding: 6px;" text="View Tickets">
+                        <content>
+                            <fx:include source="pages/ViewStatusPage.fxml" />
+                        </content>
+                    </Tab>
+                    <Tab style="-fx-background-color: #c0c0c0; -fx-text-fill: black; -fx-padding: 6px;" text="Manage Users">
+                        <content>
+                            <fx:include source="pages/AddUpdateDeleteEmployee.fxml" />
+                        </content>
+                    </Tab>
+                    <Tab style="-fx-background-color: #c0c0c0; -fx-text-fill: black; -fx-padding: 6px;" text="Manager Profile">
+                        <content>
+                            <fx:include source="pages/UpdateManagerPassword.fxml" />
+                        </content>
+                    </Tab>
+                    <Tab style="-fx-background-color: #c0c0c0; -fx-text-fill: black; -fx-padding: 6px;" text="View Asset Types">
+                        <content>
+                            <fx:include source="pages/AddUpdateDeleteAssetType.fxml" />
+                        </content>
+                    </Tab>
+                    <Tab style="-fx-background-color: #c0c0c0; -fx-text-fill: black; -fx-padding: 6px;" text="View Assets">
+                        <content>
+                            <fx:include source="pages/AddUpdateDeleteAsset.fxml" />
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </HBox>
+    </StackPane>
+
+</VBox>
